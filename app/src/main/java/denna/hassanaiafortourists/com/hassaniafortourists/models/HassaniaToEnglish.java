@@ -9,6 +9,11 @@ public class HassaniaToEnglish {
     private String wdHassania;
     private String wdEnglish;
 
+    public HassaniaToEnglish(String wdHassania, String wdEnglish) {
+        this.wdHassania = wdHassania;
+        this.wdEnglish = wdEnglish;
+    }
+
     // getter et setter des IDs des mots
     public String getIdWord() {
         return idWord;

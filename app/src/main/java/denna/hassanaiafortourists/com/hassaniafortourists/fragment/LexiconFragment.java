@@ -24,8 +24,8 @@ public class LexiconFragment extends Fragment {
 
 
     private ListView lv;
-    SQLiteOpenHelper db;//base de donnée local
-    private List<HassaniaToEnglish> [] words ;
+    SQLiteHelper db;//base de donnée local
+    private List<HassaniaToEnglish>  words ;
     private  String[] hassania ={
             "Slam",
             "El Matar",
@@ -43,15 +43,29 @@ public class LexiconFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView =inflater.inflate(R.layout.fragment_lexicon, container, false);
-
-
+        //relier la liste view a son liste view xml
+        lv=(ListView)rootView.findViewById(R.id.lexiconlist);
+        //unitaite db  with local db
     db = new SQLiteHelper(this.getContext());
+        // prendre tout les mots de la base de donnée local
+        for(int i=0;i<hassania.length;i++){
+            db.insertRecord(new HassaniaToEnglish(hassania[i],englais[i]));
+        }
 
-        words= db.get();
-   lv=(ListView)rootView.findViewById(R.id.lexiconlist);
+        //ajouter des informations a la base de données local pour verifier
 
-        CustomLexiconList adapter=new CustomLexiconList(this.getActivity(),words);
-        lv.setAdapter(adapter);
+
+
+        words= db.getAllRecords();
+        //remplire la liste view avec les mots et leurs traductiton
+        if(words.size()!=0){
+            CustomLexiconList adapter=new CustomLexiconList(this.getActivity(),words);
+            lv.setAdapter(adapter);
+        }
+
+
+
+
         return rootView;
     }
 

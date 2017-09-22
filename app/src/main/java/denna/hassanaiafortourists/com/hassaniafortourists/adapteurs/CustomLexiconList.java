@@ -18,11 +18,11 @@ import denna.hassanaiafortourists.com.hassaniafortourists.models.HassaniaToEngli
  */
 public class CustomLexiconList extends ArrayAdapter<String> {
     private final Activity context;
-    private List<HassaniaToEnglish> [] words ;
+    private List<HassaniaToEnglish>  words ;
 
 
-    public CustomLexiconList(Activity context, List<HassaniaToEnglish> [] words) {
-        super(context, R.layout.customlexiconlist, Integer.parseInt(words[1].toString()));
+    public CustomLexiconList(Activity context, List<HassaniaToEnglish>  words) {
+        super(context, R.layout.customlexiconlist, Integer.parseInt(words.get(0).getWdHassania()));
         // TODO Auto-generated constructor stub
 
         this.context=context;
@@ -40,8 +40,8 @@ public class CustomLexiconList extends ArrayAdapter<String> {
         TextView englais = (TextView) rowView.findViewById(R.id.singleEnglish);
 
 
-        hassania.setText(words[position].get(position).getWdHassania());
-        englais.setText(words[position].get(position).getWdEnglish());
+        hassania.setText(words.get(position).getWdHassania());
+        englais.setText(words.get(position).getWdEnglish());
         return rowView;
 
     }
