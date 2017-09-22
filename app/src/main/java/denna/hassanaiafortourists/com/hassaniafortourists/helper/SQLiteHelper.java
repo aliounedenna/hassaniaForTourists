@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import denna.hassanaiafortourists.com.hassaniafortourists.models.HassaniaToEnglish;
 
@@ -87,7 +88,7 @@ public SQLiteHelper(Context context) {
     database.execSQL("delete from " + TABLE_NAME + " where " + COLUMN_ID + " = '" + contact.getID() + "'");
     database.close();
     }*/
-   public ArrayList<HassaniaToEnglish> getAllRecords() {
+   public List<HassaniaToEnglish> getAllRecords() {
        database = this.getReadableDatabase();
        Cursor cursor = database.query(TABLE_NAME, null, null, null, null, null, null);
        ArrayList<HassaniaToEnglish> words = new ArrayList<HassaniaToEnglish>();

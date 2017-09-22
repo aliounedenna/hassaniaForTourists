@@ -7,24 +7,26 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import denna.hassanaiafortourists.com.hassaniafortourists.R;
+import denna.hassanaiafortourists.com.hassaniafortourists.models.HassaniaToEnglish;
 
 /**
  * Created by Denna on 22/09/2016.
  */
 public class CustomLexiconList extends ArrayAdapter<String> {
     private final Activity context;
-    private  String[] Hassania;
-    private  String[] englais ;
+    private List<HassaniaToEnglish> [] words ;
 
 
-    public CustomLexiconList(Activity context, String[] Hassania, String[] englais) {
-        super(context, R.layout.customlexiconlist, Hassania);
+    public CustomLexiconList(Activity context, List<HassaniaToEnglish> [] words) {
+        super(context, R.layout.customlexiconlist, Integer.parseInt(words[1].toString()));
         // TODO Auto-generated constructor stub
 
         this.context=context;
-        this.Hassania=Hassania;
-        this.englais = englais;
+        this.words=words;
 
     }
 
@@ -38,8 +40,8 @@ public class CustomLexiconList extends ArrayAdapter<String> {
         TextView englais = (TextView) rowView.findViewById(R.id.singleEnglish);
 
 
-        hassania.setText(Hassania[position]);
-        englais.setText(this.englais[position]);
+        hassania.setText(words[position].get(position).getWdHassania());
+        englais.setText(words[position].get(position).getWdEnglish());
         return rowView;
 
     }
