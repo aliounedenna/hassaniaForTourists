@@ -5,11 +5,14 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import denna.hassanaiafortourists.com.hassaniafortourists.models.HassaniaToEnglish;
+
+import static android.webkit.ConsoleMessage.MessageLevel.LOG;
 
 
 /**
@@ -48,7 +51,9 @@ public SQLiteHelper(Context context) {
         contentValues.put(COLUMN_WD_HASSANIA, HtoE.getWdHassania());
         contentValues.put(COLUMN_WD_ENGLISH, HtoE.getWdEnglish());
         database.insert(TABLE_NAME, null, contentValues);
+        Log.e("msg", "ligne ajouter");
         database.close();
+
     }
    /* Method 2:
 
@@ -90,22 +95,24 @@ public SQLiteHelper(Context context) {
     }*/
    public List<HassaniaToEnglish> getAllRecords() {
        database = this.getReadableDatabase();
-       Cursor cursor = database.query(TABLE_NAME, null, null, null, null, null, null);
-       ArrayList<HassaniaToEnglish> words = new ArrayList<HassaniaToEnglish>();
-       HassaniaToEnglish contactModel;
+       Cursor cursor = database.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+       ArrayList<HassaniaToEnglish> contacts = new ArrayList<HassaniaToEnglish>();
+       HassaniaToEnglish hassaniaToEnglish;
        if (cursor.getCount() > 0) {
            for (int i = 0; i < cursor.getCount(); i++) {
                cursor.moveToNext();
-               contactModel = new HassaniaToEnglish();
-               contactModel.setIdWord(cursor.getString(0));
-               contactModel.setWdHassania(cursor.getString(1));
-               contactModel.setWdEnglish(cursor.getString(2));
-               words.add(contactModel);
+               hassaniaToEnglish = new HassaniaToEnglish();
+               hassaniaToEnglish.setIdWord(cursor.getString(0));
+               hassaniaToEnglish.setWdHassania(cursor.getString(1));
+               hassaniaToEnglish.setWdEnglish(cursor.getString(2));
+               Log.e("msg", "ligne ajouter a la liste");
+               contacts.add(hassaniaToEnglish);
            }
        }
        cursor.close();
+       Log.e("msg", "liste complete");
        database.close();
-       return words;
+       return contacts;
    }
    /* Method 2:
 
@@ -129,6 +136,24 @@ public SQLiteHelper(Context context) {
         cursor.close();
         database.close();
         return contacts;
+        ....................................
+          database = this.getReadableDatabase();
+       Cursor cursor = database.query(TABLE_NAME, null, null, null, null, null, null);
+       ArrayList<HassaniaToEnglish> words = new ArrayList<>();
+       HassaniaToEnglish contactModel;
+       if (cursor.getCount() > 0) {
+           for (int i = 0; i < cursor.getCount(); i++) {
+               cursor.moveToNext();
+               contactModel = new HassaniaToEnglish();
+               contactModel.setIdWord(cursor.getString(0));
+               contactModel.setWdHassania(cursor.getString(1));
+               contactModel.setWdEnglish(cursor.getString(2));
+               words.add(contactModel);
+           }
+       }
+       cursor.close();
+       database.close();
+       return words;
     }*/
 
 }

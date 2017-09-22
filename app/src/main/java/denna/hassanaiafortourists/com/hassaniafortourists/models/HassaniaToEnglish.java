@@ -14,6 +14,10 @@ public class HassaniaToEnglish {
         this.wdEnglish = wdEnglish;
     }
 
+
+    public HassaniaToEnglish() {
+    }
+
     // getter et setter des IDs des mots
     public String getIdWord() {
         return idWord;
