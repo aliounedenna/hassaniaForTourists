@@ -1,4 +1,4 @@
-package com.maurievents.me.rest;
+package denna.hassanaiafortourists.com.hassaniafortourists.rest;
 
 /**
  * Created by moolsbytheway on 2/3/17.
@@ -6,15 +6,12 @@ package com.maurievents.me.rest;
 
 final public class Config {
 
-    // adresse de mon localhost
-
-    static final String BASE_URL = "http://192.168.1.102/maurievents/";
+    // adresse
+    static final String BASE_URL = "http://192.168.8.10:3535/";
 
     // adresse relative de l'API
-    static final String API = "android/index.php";
+    static final String API = "hft/words";
 
-    // number of featured events to show on home page
-    public static final String NUMBER_OF_FEATURED_EVENTS = "5";
+    // todo l'address finale doit etre http://192.168.8.10/hft/words
 
-    public static final String NUMBER_OF_UPCOMING_EVENTS = "7";
 }

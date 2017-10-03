@@ -1,11 +1,8 @@
 package denna.hassanaiafortourists.com.hassaniafortourists.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -18,7 +15,6 @@ import android.view.MenuItem;
 import denna.hassanaiafortourists.com.hassaniafortourists.R;
 import denna.hassanaiafortourists.com.hassaniafortourists.fragment.About_Fragment;
 import denna.hassanaiafortourists.com.hassaniafortourists.fragment.CoursesFragment;
-import denna.hassanaiafortourists.com.hassaniafortourists.fragment.LexiconFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,7 +36,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Fragment fragment =new CoursesFragment();
+        Fragment fragment = new CoursesFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content, fragment).commit();
     }
@@ -85,16 +81,12 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.courses) {
             // Handle the camera action
-            Fragment fragment =new CoursesFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.content, fragment).commit();
-        } else if (id == R.id.lexicon) {
-            Fragment fragment =new LexiconFragment();
+            Fragment fragment = new CoursesFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content, fragment).commit();
         } else if (id == R.id.About) {
 
-            Fragment fragment =new About_Fragment();
+            Fragment fragment = new About_Fragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content, fragment).commit();
         }

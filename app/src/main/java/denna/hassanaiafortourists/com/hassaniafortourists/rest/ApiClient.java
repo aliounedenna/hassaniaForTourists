@@ -1,8 +1,7 @@
-package com.maurievents.me.rest;
+package denna.hassanaiafortourists.com.hassaniafortourists.rest;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 
 
 public class ApiClient {

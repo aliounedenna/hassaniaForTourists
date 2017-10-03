@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="denna.hassanaiafortourists.com.hassaniafortourists">
 
+    <!-- J'AI AJOUTÉ LES PERMISSION POUR L'ACCESS A INTERNET PARCEQU'ON VA
+    TELECHARGER LES DONNÉES D'UNE BASE DONNÉE DISTANTE-->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,7 +30,7 @@
             android:name=".activity.SlamActivity"
             android:label="@string/title_activity_slame"
             android:parentActivityName=".activity.SlamActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.MainActivity" />

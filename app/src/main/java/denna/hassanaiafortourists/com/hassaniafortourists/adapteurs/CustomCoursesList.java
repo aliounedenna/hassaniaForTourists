@@ -1,6 +1,7 @@
 package denna.hassanaiafortourists.com.hassaniafortourists.adapteurs;
 
 import android.app.Activity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,29 +9,36 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 import denna.hassanaiafortourists.com.hassaniafortourists.R;
+import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
 
 /**
  * Created by Denna on 21/09/2016.
  */
-public class CustomCoursesList  extends ArrayAdapter<String> {
+public class CustomCoursesList extends ArrayAdapter<String> {
     private final Activity context;
-    private  String[] Hassania;
-    private  String[] englais ;
-    private   Integer[] icons;
+    private List<Word> words;
 
-    public CustomCoursesList(Activity context, String[] Hassania, String[] englais,   Integer[] icons) {
-        super(context, R.layout.customcourses_layout, Hassania);
+    public CustomCoursesList(Activity context, List<Word> words) {
+        super(context, R.layout.customcourses_layout);
         // TODO Auto-generated constructor stub
 
-        this.context=context;
-        this.Hassania=Hassania;
-        this.englais = englais;
-        this.icons=icons;
+        this.context = context;
+        this.words = words;
     }
 
-    public View getView(int position,View view,ViewGroup parent) {
-        LayoutInflater inflater=(LayoutInflater)context.getLayoutInflater();
+    @Override
+    public int getCount() {
+        return words.size();
+    }
+
+
+    @Override
+    public View getView(int position, View view, ViewGroup parent) {
+        Log.e("course adapter", "adapter get view");
+        LayoutInflater inflater = (LayoutInflater) context.getLayoutInflater();
         View rowView = inflater.inflate(R.layout.customcourses_layout, null, true);
 
 
@@ -38,9 +46,9 @@ public class CustomCoursesList  extends ArrayAdapter<String> {
         TextView hassania = (TextView) rowView.findViewById(R.id.english);
         TextView englais = (TextView) rowView.findViewById(R.id.hassinia_text);
 
-        icon.setImageResource(icons[position]);
-        hassania.setText(Hassania[position]);
-        englais.setText(this.englais[position]);
+        icon.setImageResource(R.mipmap.ic_launcher);
+        hassania.setText(words.get(position).getWdHassania());
+        englais.setText(words.get(position).getWdEnglish());
         return rowView;
 
     }
