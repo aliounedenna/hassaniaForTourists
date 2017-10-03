@@ -13,12 +13,12 @@ import denna.hassanaiafortourists.com.hassaniafortourists.R;
 /**
  * Created by Denna on 22/09/2016.
  */
-public class CustomSlamList extends ArrayAdapter<String> {
+public class SampleCustomSlamList extends ArrayAdapter<String> {
     private final Activity context;
     private String[] Hassania;
     private String[] englais;
 
-    public CustomSlamList(Activity context, String[] Hassania, String[] englais) {
+    public SampleCustomSlamList(Activity context, String[] Hassania, String[] englais) {
         super(context, R.layout.customslamlist_layout, Hassania);
         // TODO Auto-generated constructor stub
 

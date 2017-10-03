@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HassaniaForTourists.iml" filepath="$PROJECT_DIR$/HassaniaForTourists.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HassaniaForTourists.iml" filepath="$PROJECT_DIR$/HassaniaForTourists.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/hassaniafortourists.iml" filepath="$PROJECT_DIR$/hassaniafortourists.iml" />
     </modules>

@@ -9,17 +9,18 @@ import android.widget.TextView;
 import java.util.List;
 import denna.hassanaiafortourists.com.hassaniafortourists.R;
 import denna.hassanaiafortourists.com.hassaniafortourists.models.HassaniaToEnglish;
+import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
 
 /**
  * Created by Denna on 22/09/2016.
  */
 public class CustomLexiconList extends ArrayAdapter<String> {
     private final Activity context;
-    private List<HassaniaToEnglish>  words ;
+    private List<Word>  words ;
 
 
-    public CustomLexiconList(Activity context, List<HassaniaToEnglish>  words) {
-        super(context, R.layout.customlexiconlist, Integer.parseInt(words.get(1).getIdWord()));
+    public CustomLexiconList(Activity context, List<Word>  words) {
+        super(context, R.layout.customlexiconlist, Integer.parseInt(words.get(1).get_id()));
         // TODO Auto-generated constructor stub
 
         this.context=context;

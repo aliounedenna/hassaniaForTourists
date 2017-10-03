@@ -15,6 +15,7 @@ import denna.hassanaiafortourists.com.hassaniafortourists.R;
 import denna.hassanaiafortourists.com.hassaniafortourists.adapteurs.CustomLexiconList;
 import denna.hassanaiafortourists.com.hassaniafortourists.helper.SQLiteHelper;
 import denna.hassanaiafortourists.com.hassaniafortourists.models.HassaniaToEnglish;
+import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
 
 
 /**
@@ -25,7 +26,7 @@ public class LexiconFragment extends Fragment {
 
     private ListView lv;
     SQLiteHelper db;//base de donnée local
-    private List<HassaniaToEnglish>  words ;
+    private List<Word>  words ;
     private  String[] hassania ={
             "Slam",
             "El Matar",
@@ -50,7 +51,7 @@ public class LexiconFragment extends Fragment {
 
         //ajouter des informations a la base de données local pour verifier
         for(int i=0;i<hassania.length;i++){
-            db.insertRecord(new HassaniaToEnglish(hassania[i],englais[i]));
+           // db.insertRecord(new HassaniaToEnglish(hassania[i],englais[i]));
         }
 
 

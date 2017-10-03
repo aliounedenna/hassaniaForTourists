@@ -1,11 +1,9 @@
 package denna.hassanaiafortourists.com.hassaniafortourists.rest;
 
-import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
-
 import java.util.List;
 
+import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
 import retrofit2.Call;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 
 // J'ai changé GET par POST pour plus de transparance
