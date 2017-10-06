@@ -21,16 +21,18 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static final String
-            DATABASE_NAME = "Hassaniya4Tourists.db",
+            DATABASE_NAME = "hassaniyaTest.db",
             TABLE_NAME = "hassania",
             COLUMN_ID_WD = "_id",
             COLUMN_WD_HASSANIA = "wdHassaniya",
             COLUMN_WD_ENGLISH = "wdEnglish";
+    //CRUD operations
+    private SQLiteDatabase database;
+
 
     public SQLiteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
-
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -42,9 +44,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(sqLiteDatabase);
     }
-
-    //CRUD operations
-    private SQLiteDatabase database;
 
     public void insertRecord(Word HtoE) {
         boolean exists = false;
