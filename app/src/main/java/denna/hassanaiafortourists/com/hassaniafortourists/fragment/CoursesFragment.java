@@ -16,12 +16,12 @@ import android.widget.ListView;
 import java.util.List;
 
 import denna.hassanaiafortourists.com.hassaniafortourists.R;
-import denna.hassanaiafortourists.com.hassaniafortourists.helper.SQLiteHelper;
 import denna.hassanaiafortourists.com.hassaniafortourists.activity.SlamActivity;
 import denna.hassanaiafortourists.com.hassaniafortourists.adapteurs.CustomCoursesList;
+import denna.hassanaiafortourists.com.hassaniafortourists.helper.SQLiteHelper;
 import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
-import denna.hassanaiafortourists.com.hassaniafortourists.rest.ApiInterface;
 import denna.hassanaiafortourists.com.hassaniafortourists.rest.ApiClient;
+import denna.hassanaiafortourists.com.hassaniafortourists.rest.ApiInterface;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -80,10 +80,10 @@ public class CoursesFragment extends Fragment {
 
     public class getWords extends AsyncTask<Void, Void, Boolean> {
 
-        private Activity context;
         private final ApiInterface apiService;
         private final ListView lv;
         private final View rootView;
+        private Activity context;
 
         getWords(ApiInterface apiService, ListView lv, View rootView, Activity context) {
             this.apiService = apiService;
@@ -101,7 +101,7 @@ public class CoursesFragment extends Fragment {
                 // cat, km, page, sort, search
                 // les valeurs que tu veux pas utiliser tu peux les changer par null
                 //TODO change api to get next days events without specifing category
-                final Call<List<Word>> call = this.apiService.getWords();
+                final Call<List<Word>> call = this.apiService.getWords(1);
                 call.enqueue(new Callback<List<Word>>() {
                     @Override
                     public void onResponse(Call<List<Word>> call, Response<List<Word>> response) {
