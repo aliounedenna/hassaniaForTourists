@@ -1,7 +1,6 @@
 package denna.hassanaiafortourists.com.hassaniafortourists.fragment;
 
 
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,7 +13,6 @@ import java.util.List;
 import denna.hassanaiafortourists.com.hassaniafortourists.R;
 import denna.hassanaiafortourists.com.hassaniafortourists.adapteurs.CustomLexiconList;
 import denna.hassanaiafortourists.com.hassaniafortourists.helper.SQLiteHelper;
-import denna.hassanaiafortourists.com.hassaniafortourists.models.HassaniaToEnglish;
 import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
 
 
@@ -24,8 +22,8 @@ import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
 public class LexiconFragment extends Fragment {
 
 
-    private ListView lv;
     SQLiteHelper db;//base de donnée local
+    private ListView lv;
     private List<Word>  words ;
     private  String[] hassania ={
             "Slam",

@@ -6,9 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
 import java.util.List;
+
 import denna.hassanaiafortourists.com.hassaniafortourists.R;
-import denna.hassanaiafortourists.com.hassaniafortourists.models.HassaniaToEnglish;
 import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
 
 /**
