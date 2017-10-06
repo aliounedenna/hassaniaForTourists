@@ -8,7 +8,6 @@ import com.google.gson.annotations.SerializedName;
  */
 
 
-// todo LE MODEL HASSANIYATOENGLISH EST NOMMÉ "WORD" MAINTENANT
 public class Word {
 
     @SerializedName("_id")
@@ -31,7 +30,7 @@ public class Word {
         return _id != null ? _id : "";
     }
 
-    public void set_id(String _id) {
+    public void set_id(String _i) {
         this._id = _id;
     }
 
