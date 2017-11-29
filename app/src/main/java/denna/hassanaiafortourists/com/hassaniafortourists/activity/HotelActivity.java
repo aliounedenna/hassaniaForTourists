@@ -17,24 +17,26 @@ public class HotelActivity extends AppCompatActivity {
     private  String[] hassania ={
             "Salamoou alikoum",
             "wa alikoum selam",
-            "Nte chahalak?",
-            "lebas, chahalak ente?",
-            "lebas, chahal ehel dar?",
-            "lebas alihoum,bikheyr. chatari",
-            "Mareytou, ela chakle w dar.",
-            "ok. wedatak lmoulana. selemli ala ehl dar.",
-            "balek, wedatak lmoulane."
+            "Ane adalet reservation sbou lavayet ve net",
+            "esmak chenhou",
+            "Jack Mayer",
+            "Eheh. Reservation l sbou.",
+            "wallahi",
+            "Atini passport we dor netaloulak bagagek. hak mouvtahak. chambre 5",
+            "Choukrane.",
+            "Merehba bik vi Mauritania."
     };
     private  String[] englais ={
             "Peace be upon on you",
             "Peace be upon on you too",
-            "How are you",
-            "fine, and you",
-            "fine, how is your familly?",
-            "they are fine and safe, wht's up?",
-            "nothing, judt work and home.",
-            "ok. god bless you. gret all the familly.",
-            "I will. god bless you."
+            "I have made a reservation last week via internet",
+            "fWhat's your name?",
+            "Jack Mayer",
+            "Yes. a reservation for one week?",
+            "Yes",
+            "Give me your passport and we will send yourluggage just after you. Take you keys. Room number 5.",
+            "Thank you.",
+            "welcom in Mauritania."
     };
 
     @Override

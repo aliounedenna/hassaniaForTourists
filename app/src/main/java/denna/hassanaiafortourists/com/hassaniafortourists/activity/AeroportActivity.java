@@ -23,7 +23,7 @@ public class AeroportActivity extends AppCompatActivity {
             "jaye chakla. andi randez-vous maa cherike lahi nesetathmar vihe. yalla ioudou ihanouni",
             "ok. andak rakemhoum?",
             "oui. hak",
-            "ok.merehba bik vi Mauritania",
+            "ok. Merehba bik vi Mauritania",
             "choukrane :)"
     };
     private  String[] englais ={
