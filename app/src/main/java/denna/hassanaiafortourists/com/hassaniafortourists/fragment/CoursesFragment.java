@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import denna.hassanaiafortourists.com.hassaniafortourists.R;
 import denna.hassanaiafortourists.com.hassaniafortourists.activity.AeroportActivity;
+import denna.hassanaiafortourists.com.hassaniafortourists.activity.HotelActivity;
 import denna.hassanaiafortourists.com.hassaniafortourists.activity.SlamActivity;
 import denna.hassanaiafortourists.com.hassaniafortourists.adapteurs.CustomCoursesList;
 
@@ -69,6 +70,9 @@ public class CoursesFragment extends Fragment {
                 }
                 if(position==1){
                     Intent intent = new Intent(getActivity(), AeroportActivity.class);
+                    startActivity(intent);
+                }if(position==2){
+                    Intent intent = new Intent(getActivity(), HotelActivity.class);
                     startActivity(intent);
                 }
 
