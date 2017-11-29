@@ -19,19 +19,22 @@ import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
  */
 public class CustomCoursesList extends ArrayAdapter<String> {
     private final Activity context;
-    private List<Word> words;
+    private String[] hassania,englais;
+    private int[] icons;
 
-    public CustomCoursesList(Activity context, List<Word> words) {
+    public CustomCoursesList(Activity context, String[] hassania ,String[] englais,int[] icons) {
         super(context, R.layout.customcourses_layout);
         // TODO Auto-generated constructor stub
 
         this.context = context;
-        this.words = words;
+        this.hassania = hassania;
+        this.englais = englais;
+        this.icons = icons;
     }
 
     @Override
     public int getCount() {
-        return words.size();
+        return hassania.length;
     }
 
 
@@ -46,9 +49,9 @@ public class CustomCoursesList extends ArrayAdapter<String> {
         TextView hassania = (TextView) rowView.findViewById(R.id.english);
         TextView englais = (TextView) rowView.findViewById(R.id.hassinia_text);
 
-        icon.setImageResource(R.mipmap.ic_launcher);
-        hassania.setText(words.get(position).getWdHassania());
-        englais.setText(words.get(position).getWdEnglish());
+        icon.setImageResource(this.icons[position]);
+        hassania.setText(this.hassania[position]);
+        englais.setText(this.englais[position]);
         return rowView;
 
     }

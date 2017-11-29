@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="denna.hassanaiafortourists.com.hassaniafortourists">
 
-    <!-- J'AI AJOUTÉ LES PERMISSION POUR L'ACCESS A INTERNET PARCEQU'ON VA
-    TELECHARGER LES DONNÉES D'UNE BASE DONNÉE DISTANTE-->
+    <!--
+    J'AI AJOUTÉ LES PERMISSION POUR L'ACCESS A INTERNET PARCEQU'ON VA
+    TELECHARGER LES DONNÉES D'UNE BASE DONNÉE DISTANTE
+    -->
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -29,12 +31,16 @@
         <activity
             android:name=".activity.SlamActivity"
             android:label="@string/title_activity_slame"
-            android:parentActivityName=".activity.SlamActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.MainActivity" />
         </activity>
+        <activity
+            android:name=".activity.AeroportActivity"
+            android:label="@string/title_activity_aeroport"
+            ></activity>
     </application>
 
 </manifest>

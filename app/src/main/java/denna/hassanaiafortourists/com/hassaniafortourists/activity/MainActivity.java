@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import denna.hassanaiafortourists.com.hassaniafortourists.R;
 import denna.hassanaiafortourists.com.hassaniafortourists.fragment.About_Fragment;
 import denna.hassanaiafortourists.com.hassaniafortourists.fragment.CoursesFragment;
+import denna.hassanaiafortourists.com.hassaniafortourists.fragment.LexiconFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -84,7 +85,13 @@ public class MainActivity extends AppCompatActivity
             Fragment fragment = new CoursesFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content, fragment).commit();
-        } else if (id == R.id.About) {
+        } else if (id == R.id.lexicon) {
+
+            Fragment fragment = new LexiconFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.content, fragment).commit();
+        }
+else if (id == R.id.About) {
 
             Fragment fragment = new About_Fragment();
             FragmentManager fragmentManager = getSupportFragmentManager();

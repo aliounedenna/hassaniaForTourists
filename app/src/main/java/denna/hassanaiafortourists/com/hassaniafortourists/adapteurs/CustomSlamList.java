@@ -17,16 +17,15 @@ public class CustomSlamList  extends ArrayAdapter<String> {
     private final Activity context;
     private  String[] Hassania;
     private  String[] englais ;
-    private   Integer[] icons;
 
-    public CustomSlamList(Activity context, String[] Hassania, String[] englais,   Integer[] icons) {
+
+    public CustomSlamList(Activity context, String[] Hassania, String[] englais) {
         super(context, R.layout.customslamlist_layout, Hassania);
         // TODO Auto-generated constructor stub
 
         this.context=context;
         this.Hassania=Hassania;
         this.englais = englais;
-        this.icons=icons;
     }
 
     public View getView(int position,View view,ViewGroup parent) {
@@ -35,10 +34,10 @@ public class CustomSlamList  extends ArrayAdapter<String> {
 
 
         ImageView icon = (ImageView) rowView.findViewById(R.id.voie);
-        TextView hassania = (TextView) rowView.findViewById(R.id.anglais);
-        TextView englais = (TextView) rowView.findViewById(R.id.Hassania);
-
-        icon.setImageResource(icons[position]);
+        TextView hassania = (TextView) rowView.findViewById(R.id.Hassania);
+        TextView englais = (TextView) rowView.findViewById(R.id.anglais);
+//TODO remplacer l'icon par icon voie
+        icon.setImageResource(R.mipmap.ic_launcher);
         hassania.setText(Hassania[position]);
         englais.setText(this.englais[position]);
         return rowView;

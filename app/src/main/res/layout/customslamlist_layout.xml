@@ -8,24 +8,29 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/Hassania"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Hassania"
-            android:id="@+id/Hassania"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/voie"
+            android:layout_toStartOf="@+id/voie"
+            android:text="Hassania"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
+            android:id="@+id/anglais"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="anglais"
-            android:id="@+id/anglais"
             android:layout_alignBottom="@+id/voie"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/voie"
+            android:layout_toStartOf="@+id/voie"
+            android:text="anglais"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <ImageView
             android:layout_width="80dp"
