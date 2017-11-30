@@ -42,7 +42,10 @@
             android:label="@string/title_activity_aeroport" />
         <activity
             android:name=".activity.HotelActivity"
-            android:label="@string/title_activity_hotel"></activity>
+            android:label="@string/title_activity_hotel" />
+        <activity
+            android:name=".activity.ShopActivity"
+            android:label="@string/title_activity_shop"></activity>
     </application>
 
 </manifest>

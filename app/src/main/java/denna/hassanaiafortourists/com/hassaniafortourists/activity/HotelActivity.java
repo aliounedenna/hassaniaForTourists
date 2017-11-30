@@ -30,7 +30,7 @@ public class HotelActivity extends AppCompatActivity {
             "Peace be upon on you",
             "Peace be upon on you too",
             "I have made a reservation last week via internet",
-            "fWhat's your name?",
+            "What's your name?",
             "Jack Mayer",
             "Yes. a reservation for one week?",
             "Yes",
