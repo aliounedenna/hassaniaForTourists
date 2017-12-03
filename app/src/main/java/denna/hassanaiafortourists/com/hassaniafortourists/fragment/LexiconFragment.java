@@ -52,15 +52,18 @@ public class LexiconFragment extends Fragment {
         SQLiteHelper db = new SQLiteHelper(this.getActivity());
         words = db.getAllRecords();
 
-        CustomLexiconList adapter = new CustomLexiconList(this.getActivity(), words);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // TODO Lancer le son relatif a ce mots clicker
+        if(words.size()!=0){
+            CustomLexiconList adapter = new CustomLexiconList(this.getActivity(), words);
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    // TODO Lancer le son relatif a ce mots clicker
 
-            }
-        });
-        lv.setAdapter(adapter);
+                }
+            });
+            lv.setAdapter(adapter);
+        }
+
     }
 
 
