@@ -1,6 +1,8 @@
 package denna.hassanaiafortourists.com.hassaniafortourists.adapteurs;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +23,8 @@ public class CustomLexiconList extends ArrayAdapter<String> {
 
 
     public CustomLexiconList(Activity context, List<Word>  words) {
-        super(context, R.layout.customlexiconlist, Integer.parseInt(words.get(1).get_id()));
+
+        super(context, R.layout.customlexiconlist, Integer.parseInt(words.get(0).get_id()));
         // TODO Auto-generated constructor stub
 
         this.context=context;

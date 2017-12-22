@@ -51,8 +51,9 @@ public class LexiconFragment extends Fragment {
     public void updateView(String fro) {
         SQLiteHelper db = new SQLiteHelper(this.getActivity());
         words = db.getAllRecords();
-
+        Log.e("id id:",  words.get(0).get_id());
         if(words.size()!=0){
+
             CustomLexiconList adapter = new CustomLexiconList(this.getActivity(), words);
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override

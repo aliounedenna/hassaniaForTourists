@@ -51,7 +51,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         database = this.getReadableDatabase();
         Cursor cursor = database.rawQuery("SELECT * FROM " + TABLE_NAME, null);
 
-        ArrayList<Word> words = new ArrayList<>();
+
 
         if (cursor.getCount() > 0) {
             for (int i = 0; i < cursor.getCount(); i++) {
@@ -70,6 +70,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         // SI LE MOT N'EXISTE PAS AJOUTE LE
         if (!exists) {
             ContentValues contentValues = new ContentValues();
+            contentValues.put(COLUMN_ID_WD, HtoE.get_id());
             contentValues.put(COLUMN_WD_HASSANIA, HtoE.getWdHassania());
             contentValues.put(COLUMN_WD_ENGLISH, HtoE.getWdEnglish());
             database.insert(TABLE_NAME, null, contentValues);
@@ -91,9 +92,10 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     public void updateRecord(Word HtoE) {
         database = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_ID_WD, HtoE.get_id());
         contentValues.put(COLUMN_WD_HASSANIA, HtoE.getWdHassania());
         contentValues.put(COLUMN_WD_ENGLISH, HtoE.getWdEnglish());
-        database.update(TABLE_NAME, contentValues, COLUMN_WD_HASSANIA + " = ?", new String[]{HtoE.get_id()});
+        database.update(TABLE_NAME, contentValues, COLUMN_ID_WD + " = ?", new String[]{HtoE.get_id()});
         database.close();
     }
    /* Method 2:
@@ -127,6 +129,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
                 cursor.moveToNext();
                 Word word = new Word();
                 word.set_id(cursor.getString(0));
+
                 word.setWdHassania(cursor.getString(1));
                 word.setWdEnglish(cursor.getString(2));
                 Log.e("msg", "ligne ajouter a la liste");
@@ -136,6 +139,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         cursor.close();
         Log.e("msg", "liste complete");
         database.close();
+        Log.e("id id:", words.get(0).getWdEnglish());
         return words;
     }
    /* Method 2:
