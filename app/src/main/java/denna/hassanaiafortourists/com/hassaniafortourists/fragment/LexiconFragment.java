@@ -11,7 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import java.util.List;
+
 import denna.hassanaiafortourists.com.hassaniafortourists.R;
 import denna.hassanaiafortourists.com.hassaniafortourists.adapteurs.CustomLexiconList;
 import denna.hassanaiafortourists.com.hassaniafortourists.helper.SQLiteHelper;
@@ -51,10 +53,11 @@ public class LexiconFragment extends Fragment {
     public void updateView(String fro) {
         SQLiteHelper db = new SQLiteHelper(this.getActivity());
         words = db.getAllRecords();
-        Log.e("id id:",  words.get(0).get_id());
+        Log.e("update view from :", fro);
         if(words.size()!=0){
 
             CustomLexiconList adapter = new CustomLexiconList(this.getActivity(), words);
+            lv.setAdapter(adapter);
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -62,7 +65,6 @@ public class LexiconFragment extends Fragment {
 
                 }
             });
-            lv.setAdapter(adapter);
         }
 
     }
@@ -76,7 +78,7 @@ public class LexiconFragment extends Fragment {
         final ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        lv = (ListView) rootView.findViewById(R.id.coursesList);
+        lv = (ListView) rootView.findViewById(R.id.lexiconlist);
 
 
         updateView("main");

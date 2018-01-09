@@ -19,7 +19,7 @@ import denna.hassanaiafortourists.com.hassaniafortourists.models.Word;
 
 public class SQLiteHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 4;
     private static final String
             DATABASE_NAME = "hassaniyaTest.db",
             TABLE_NAME = "hassania",
@@ -139,7 +139,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         cursor.close();
         Log.e("msg", "liste complete");
         database.close();
-        Log.e("id id:", words.get(0).getWdEnglish());
+//        Log.e("id id:", words.get(0).getWdEnglish());
         return words;
     }
    /* Method 2:
