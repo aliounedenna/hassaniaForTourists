@@ -27,6 +27,11 @@ public class SampleCustomSlamList extends ArrayAdapter<String> {
         this.englais = englais;
     }
 
+    @Override
+    public int getCount() {
+        return Hassania.length;
+    }
+
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getLayoutInflater();
         View rowView = inflater.inflate(R.layout.customslamlist_layout, null, true);
