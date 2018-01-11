@@ -10,8 +10,7 @@
         android:layout_height="wrap_content"
         android:maxWidth="200dp"
         android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#fff" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
         android:id="@+id/singleEnglish"
@@ -25,7 +24,6 @@
         android:layout_toRightOf="@+id/singleHassania"
         android:maxHeight="200dp"
         android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#fff" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
 </RelativeLayout>
