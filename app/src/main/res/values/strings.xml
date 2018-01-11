@@ -9,4 +9,12 @@
     <string name="title_activity_aeroport">AeroportActivity</string>
     <string name="title_activity_hotel">HotelActivity</string>
     <string name="title_activity_shop">ShopActivity</string>
+    <string name="about_hassania_for_tourists">Version 2.0\n
+        Just traveled to Mauritania!\n\n
+Couldn’t communicate due to language barrier!\n\n
+There is the solution!\n\n
+“Hassania for Tourists” is an easy to use application that will help you to speak Hassania (the local dialect in Mauritania).
+The advantage of this application is the easy to use interface and real life situation where strangers normally are obliged to use Hassania to make their adventure more interesting.
+“hassania for Tourists” an application, built by Mauritanians, To try to help Tourists to make their experience more interesting.\n\n\n
+</string>
 </resources>
