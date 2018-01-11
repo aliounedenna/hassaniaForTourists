@@ -41,11 +41,11 @@ public class AeroportActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aeroport);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarAeroport);
+        setSupportActionBar(toolbar);
 
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
 
-        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         lv=(ListView)findViewById(R.id.aeroport_list);
         //TODO a remplacer par icon Slame

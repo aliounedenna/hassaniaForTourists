@@ -39,13 +39,30 @@
         </activity>
         <activity
             android:name=".activity.AeroportActivity"
-            android:label="@string/title_activity_aeroport" />
+            android:label="@string/title_activity_aeroport"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".activity.MainActivity" />
         <activity
             android:name=".activity.HotelActivity"
-            android:label="@string/title_activity_hotel" />
+            android:label="@string/title_activity_hotel"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".activity.MainActivity" />
         <activity
             android:name=".activity.ShopActivity"
-            android:label="@string/title_activity_shop"></activity>
+            android:label="@string/title_activity_shop"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
