@@ -37,10 +37,10 @@ public class CoursesFragment extends Fragment {
             "Hotel"
     };
     private int[] icons = {
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher
+            R.mipmap.greeting_icon,
+            R.mipmap.airport,
+            R.mipmap.shop_icon,
+            R.mipmap.hotel_icon
     };
 
     @Override
