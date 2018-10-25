@@ -7,7 +7,7 @@ package denna.hassanaiafortourists.com.hassaniafortourists.rest;
 final class Config {
 
     // adresse
-    static final String BASE_URL = "http://192.168.1.63/";
+    static final String BASE_URL = "http://192.168.1.104/";
 
     // adresse relative de l'API
     static final String API = "hassaniya4tapi/";

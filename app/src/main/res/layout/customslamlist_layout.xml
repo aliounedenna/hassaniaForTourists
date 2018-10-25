@@ -10,8 +10,9 @@
 
         <TextView
             android:id="@+id/Hassania"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/anglais"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
@@ -20,19 +21,19 @@
             android:text="Hassania"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <TextView
-            android:id="@+id/anglais"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/voie"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_toLeftOf="@+id/voie"
-            android:layout_toStartOf="@+id/voie"
-            android:gravity="right"
-            android:text="anglais"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/anglais"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/voie"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/voie"
+        android:layout_toStartOf="@+id/voie"
+        android:gravity="right"
+        android:text="anglais"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
 
         <ImageView
             android:id="@+id/voie"

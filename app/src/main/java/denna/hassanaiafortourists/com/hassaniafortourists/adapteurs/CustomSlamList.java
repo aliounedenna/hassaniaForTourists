@@ -37,7 +37,7 @@ public class CustomSlamList  extends ArrayAdapter<String> {
         TextView hassania = (TextView) rowView.findViewById(R.id.Hassania);
         TextView englais = (TextView) rowView.findViewById(R.id.anglais);
 //TODO remplacer l'icon par icon voie
-        icon.setImageResource(R.mipmap.ic_launcher);
+        icon.setImageResource(R.drawable.play);
         hassania.setText(Hassania[position]);
         englais.setText(this.englais[position]);
         return rowView;
